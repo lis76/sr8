@@ -1,30 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Myapp</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+  <html lang="en">
+      <head>
+        <title>Myapp</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-</head>
+        <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+        <%= javascript_importmap_tags %>
+      </head>
 
-<body>
-<div class="container-fluid container-background">
-  <div class="container">
+      <body>
+          <div class="container-fluid container-background">
+            <div class="container">
 
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <%= link_to "Главная", root_path %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "О нас", pages_about_path %>
-      </li>
-    </ul>
+              <ul class="nav nav-pills nav-justified">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/">Главнвя</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/pages/about">О нас</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Disabled</a>
+                </li>
+              </ul>
 
-    <%= yield %>
-  </div>
-</div>
-</body>
-</html>
+              <ul class="nav nav-pills">
+                <li class="nav-item">
+                  <%= link_to "Главная", root_path %>
+                </li>
+                <li class="nav-item">
+                  <%= link_to "О нас", pages_about_path %>
+                </li>
+              </ul>
+
+              <%= yield %>
+            </div>
+          </div>
+      </body>
+  </html>
