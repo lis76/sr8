@@ -19,13 +19,13 @@
                   <%= link_to "Главнвя", root_path, class: 'nav-link active' %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "О нас", root_path, class: 'nav-link active' %>
+                  <%= link_to "О нас", pages_about_path, class: 'nav-link active' %>
                 </li>
-                <% if user_signed_in? %>
-                  <li class="nav-item">
-                  <%= link_to "выйти", destroy_user_session_path, class: 'nav-link active' %>
-                </li>
-                  <% end %>
+                    <% if user_signed_in? %>
+                      <li class="nav-item">
+                      <%= link_to "выйти", destroy_user_session_path, class: 'nav-link active' %>
+                    </li>
+                    <% end %>
               </ul>
 
               <p class="notice"><%= notice %></p>
