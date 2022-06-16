@@ -16,17 +16,16 @@
 
               <ul class="nav nav-pills nav-justified">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/">Главнвя</a>
+                  <%= link_to "Главнвя", root_path, class: 'nav-link active' %>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="/pages/about">О нас</a>
+                  <%= link_to "О нас", root_path, class: 'nav-link active' %>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <% if user_signed_in? %>
+                  <li class="nav-item">
+                  <%= link_to "выйти", destroy_user_session_path, class: 'nav-link active' %>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled">Disabled</a>
-                </li>
+                  <% end %>
               </ul>
 
               <p class="notice"><%= notice %></p>
